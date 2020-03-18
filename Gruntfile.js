@@ -9,12 +9,15 @@ module.exports = function(grunt) {
         }
       },
       bake: {
-        files: ["html/**"],
+        files: ["**/includes/*.html"],
         tasks: "bake:build"
       },
-      all: { files: ['**/*.html'], options: { livereload: true } } 
+			      all: { files: ['**/*.html'], options: { livereload: true } }
+
     },
+		
     sass: { dev: { files: { 'css/main.css':'sass/main.sass' } } },
+
     bake: {
       build: {
         files: {
@@ -24,7 +27,7 @@ module.exports = function(grunt) {
     }
 
   });
-  grunt.loadNpmTasks( "grunt-bake" );
+	grunt.loadNpmTasks('grunt-bake')
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-watch');
 };

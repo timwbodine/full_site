@@ -25,6 +25,7 @@ html {
 
 body {
   box-sizing: border-box;
+  height: 100%;
 }
 
 @keyframes shake {
@@ -44,12 +45,26 @@ body {
 h1 {
   font-family: "Cabin", sans-serif;
   font-weight: 600;
+  color: blue;
 }
 
 h2 {
   font-family: "Cabin", sans-serif;
   font-weight: 800;
   font-size: 1.5rem;
+}
+
+span {
+  color: purple;
+}
+
+.full_view {
+  display: flex;
+  flex-direction: row;
+}
+
+.sidebar_content, .main_content {
+  height: 95vh;
 }
 
 /*# sourceMappingURL=main.css.map */
