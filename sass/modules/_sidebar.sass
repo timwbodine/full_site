@@ -15,31 +15,27 @@
         left: 0
         height: 100%
         width: .3rem
-        background-color: blue
+        background-color: var(--color-primary-light)
         transform: scaleY(0)
-        
 
     &__item:hover::before,
     &__item--active::before
         transform: scaleY(1)
         width: 100%
-        transition: transform .1s    
+        transition: transform .2s    
     &__item:hover > &__link
         text-decoration: none
-        text-decoration: uppercase
-
-
-    
-
+        color: white
     &__link::before
         height: 0
         width: 0
         content: ""
         position: absolute
-        left: 19.5%
+        left: 3.8rem
         top: 50%
         transform: translate(-50%,-50%)
         border-radius: 50%
+        transition: .2s
 
     &__item:hover > &__link::before
         height: 3.5rem
@@ -48,24 +44,44 @@
                 
 
     &__item:active::before
-        background-color: red
-
+        background-color: var(--color-primary-dark)
     
     &__link,
     &__link:visited
-        color: green
+        color: var(--color-grey-light)
         text-decoration: none
-        text-transform: uppercase
         padding: 1.5rem 3rem
         position: relative
         z-index: 10
         display: flex
         align-items: center
+
     
     &__icon
         width: 1.75rem
         z-index: 100
         height: 1.75rem
         margin-right: 2rem
-        fill: currentColor
-    
+        fill: var(--color-primary-light)
+
+    &__button > &__icon
+        fill: white
+        margin: .5rem auto
+
+    &__button-container
+        display: flex
+        flex-direction: row
+
+
+    &__button
+        flex: 1
+        display: flex
+        flex-direction: column
+        border: none
+        color: white
+        padding: 2rem 0
+        background-color: var(--color-primary-light)
+        &:focus 
+            outline: none
+        &:active 
+            transform: translateY(2px)

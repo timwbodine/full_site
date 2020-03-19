@@ -1,3 +1,13 @@
+:root {
+  --color-primary-light:#2c85a3;
+  --color-primary-dark:#336666;
+  --color-grey-light: #666666;
+  --color-grey-dark:#333;
+  --shadow-dark: 0 2rem 6rem rgba(0,0,0, .3);
+  --shadow-light: 0 2rem 5rem rgba(0,0,0,.06);
+  --line: 1px solid var(--color-grey-light-2);
+}
+
 html {
   font-size: 62.5%;
 }
@@ -44,17 +54,13 @@ body {
 h1 {
   font-family: "Cabin", sans-serif;
   font-weight: 600;
-  color: blue;
+  color: var(--color-grey-dark);
 }
 
 h2 {
   font-family: "Cabin", sans-serif;
   font-weight: 800;
   font-size: 1.5rem;
-}
-
-span {
-  color: purple;
 }
 
 .full_view {
@@ -81,27 +87,28 @@ span {
   left: 0;
   height: 100%;
   width: 0.3rem;
-  background-color: blue;
+  background-color: var(--color-primary-light);
   transform: scaleY(0);
 }
 .side-nav__item:hover::before, .side-nav__item--active::before {
   transform: scaleY(1);
   width: 100%;
-  transition: transform 0.1s;
+  transition: transform 0.2s;
 }
 .side-nav__item:hover > .side-nav__link {
   text-decoration: none;
-  text-decoration: uppercase;
+  color: white;
 }
 .side-nav__link::before {
   height: 0;
   width: 0;
   content: "";
   position: absolute;
-  left: 19.5%;
+  left: 3.8rem;
   top: 50%;
   transform: translate(-50%, -50%);
   border-radius: 50%;
+  transition: 0.2s;
 }
 .side-nav__item:hover > .side-nav__link::before {
   height: 3.5rem;
@@ -109,12 +116,11 @@ span {
   background-color: white;
 }
 .side-nav__item:active::before {
-  background-color: red;
+  background-color: var(--color-primary-dark);
 }
 .side-nav__link, .side-nav__link:visited {
-  color: green;
+  color: var(--color-grey-light);
   text-decoration: none;
-  text-transform: uppercase;
   padding: 1.5rem 3rem;
   position: relative;
   z-index: 10;
@@ -126,7 +132,30 @@ span {
   z-index: 100;
   height: 1.75rem;
   margin-right: 2rem;
-  fill: currentColor;
+  fill: var(--color-primary-light);
+}
+.side-nav__button > .side-nav__icon {
+  fill: white;
+  margin: 0.5rem auto;
+}
+.side-nav__button-container {
+  display: flex;
+  flex-direction: row;
+}
+.side-nav__button {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  border: none;
+  color: white;
+  padding: 2rem 0;
+  background-color: var(--color-primary-light);
+}
+.side-nav__button:focus {
+  outline: none;
+}
+.side-nav__button:active {
+  transform: translateY(2px);
 }
 
 /*# sourceMappingURL=main.css.map */
