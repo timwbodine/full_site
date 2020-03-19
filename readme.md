@@ -1,7 +1,7 @@
 # README 
 
-A simple skeleton for starting sass/javascript/jquery projects.
-Uses Grunt to automate sass compilation and html preprocessing with grunt-bake templates.
+Built from a mockup for practice and personal development reasons.
+Note - for svg images to load, must be run from local server.
 
 
 ## Installation and usage
