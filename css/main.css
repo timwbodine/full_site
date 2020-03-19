@@ -68,6 +68,26 @@ h2 {
   flex-direction: row;
 }
 
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 22.5rem;
+}
+
+.main_content {
+  background-color: orange;
+  flex: 1;
+}
+
+.header_content {
+  height: 5vh;
+}
+
+.main_content, .sidebar {
+  height: 95vh;
+}
+
 .side-nav {
   font-size: 1.4rem;
   list-style: none;
@@ -146,6 +166,8 @@ h2 {
   flex: 1;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   border: none;
   color: white;
   padding: 2rem 0;
