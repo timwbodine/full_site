@@ -9,7 +9,7 @@ module.exports = function(grunt) {
         }
       },
       bake: {
-        files: ["**/includes/*.html"],
+        files: ["**/include/*.html"],
         tasks: "bake:build"
       },
 			      all: { files: ['**/*.html'], options: { livereload: true } }
@@ -21,7 +21,7 @@ module.exports = function(grunt) {
     bake: {
       build: {
         files: {
-        "html/index.html" : "html/base.html"
+        "index.html" : "html/base.html"
         }
       }
     }
