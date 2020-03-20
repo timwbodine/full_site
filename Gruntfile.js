@@ -9,7 +9,7 @@ module.exports = function(grunt) {
         }
       },
       bake: {
-        files: ["**/include/*.html"],
+        files: ["**/includes/*.html"],
         tasks: "bake:build"
       },
 			      all: { files: ['**/*.html'], options: { livereload: true } }
