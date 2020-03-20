@@ -27,6 +27,11 @@ html {
   }
 }
 
+a, a:hover {
+  text-decoration: none;
+  color: black;
+}
+
 *,
 *::after,
 *::before {
@@ -63,9 +68,16 @@ h2 {
   font-size: 1.5rem;
 }
 
+.dropdown-menu {
+  left: -5rem;
+}
+
 .full_view {
   display: flex;
   flex-direction: row;
+  background-image: url("../img/base-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .sidebar {
@@ -73,26 +85,43 @@ h2 {
   flex-direction: column;
   justify-content: space-between;
   width: 22.5rem;
+  background-color: rgba(255, 255, 255, 0.8);
 }
 
 .main_content {
-  background-color: orange;
   flex: 1;
+  background-color: transparent;
 }
 
 .header_content {
-  height: 5vh;
+  height: 4rem;
 }
 
 .main_content, .sidebar {
-  height: 95vh;
+  height: 96vh;
+}
+
+.header {
+  padding: 0.3rem 0.3rem 0.2rem 1rem;
+  z-index: 1;
+}
+.header__logo {
+  height: 4rem;
+}
+.header__icon {
+  width: 2.75rem;
+  z-index: 1;
+  height: 2.75rem;
+  margin-right: 2rem;
+  fill: currentColor;
 }
 
 .side-nav {
   font-size: 1.4rem;
   list-style: none;
-  margin-top: 3.5rem;
+  margin-top: 1.4rem;
   padding: 0;
+  padding-top: 0;
 }
 .side-nav__item {
   position: relative;
@@ -113,7 +142,7 @@ h2 {
 .side-nav__item:hover::before, .side-nav__item--active::before {
   transform: scaleY(1);
   width: 100%;
-  transition: transform 0.2s;
+  transition: transform 0.1s;
 }
 .side-nav__item:hover > .side-nav__link {
   text-decoration: none;
@@ -128,11 +157,11 @@ h2 {
   top: 50%;
   transform: translate(-50%, -50%);
   border-radius: 50%;
-  transition: 0.2s;
+  transition: 0.1s;
 }
 .side-nav__item:hover > .side-nav__link::before {
-  height: 3.5rem;
-  width: 3.5rem;
+  height: 3rem;
+  width: 3rem;
   background-color: white;
 }
 .side-nav__item:active::before {
@@ -141,15 +170,14 @@ h2 {
 .side-nav__link, .side-nav__link:visited {
   color: var(--color-grey-light);
   text-decoration: none;
-  padding: 1.5rem 3rem;
+  padding: 0.8rem 3rem;
   position: relative;
-  z-index: 10;
   display: flex;
   align-items: center;
 }
 .side-nav__icon {
   width: 1.75rem;
-  z-index: 100;
+  z-index: 1;
   height: 1.75rem;
   margin-right: 2rem;
   fill: var(--color-primary-light);
